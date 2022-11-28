@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./salary.css">
+</head>
+
+<body>
+    <div id="basicSalary">
+        <h1>Net Salary Generator </h1>
+        <input id="basic" type="number" placeholder="basic salary" min="0" oninput="handleSalary(event)">
+        <input class="allowances" type="number" placeholder="allowance 1" min="0" oninput="handleSalary(event)">
+        <input class="allowances" type="number" placeholder="allowance 2" min="0" oninput="handleSalary(event)">
+        <input class="allowances" type="number" placeholder="allowance 3" min="0" oninput="handleSalary(event)">
+        <input class="allowances" type="number" placeholder="allowance 4" min="0" oninput="handleSalary(event)">
+      <div id="output">
+        <div><span class="markings" >NHIF </span><span id="nhif"></span></div>
+        <div><span class="markings">NSSF</span> <span id="nssf"></span></div>
+        <div><span class="markings">PAYE </span><span  id="paye"></span></div>
+        <div><span class="markings">Taxable income </span><span  id="TaxablePay"></span></div>
+        <div><span class="markings">Net pay</span> <span id="NetPay"></span></div>
+      </div>
+    </div>
+    <script src="./salary.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+html{
+    background-color: rgb(160, 219, 221);
+
+}
+.markings{
+    font-weight: bolder;
+
+}
+#output div{
+    display: flex;
+    padding: 1em;
+
+}
+span{
+    width: 50%;
+
+}
+input{
+    display: block;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 2px;
+    border: solid 1px green;
+    margin:2% auto;
+    width: 60%;
+    text-align: center;
+
+}
