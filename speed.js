@@ -1,4 +1,4 @@
-const speedCar = ""
+
 function checkSpeedCar(speedCar){
 
 if (speedCar <=70){
