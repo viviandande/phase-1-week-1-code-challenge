@@ -1,99 +1,106 @@
-# phase-1-week-1-code-challenge
-*****
-### Author : Name : Vivian Dande Date : 28/11/2022
-****
-## Project Description
-Toy challenge1
-This is a program that prompts the user to input student marks. The input is between 0 and 100 while the output indicates the correct grade as follows:
+## The `studentMarks.js` file
 
-A > 79, B > 60 to 79, C > 59 to 49, D > 40 to 49, E > less 40.
-
-All the tasks to be performed under my functions are wrapped in curly braces.
-
-<!-- function checkGrades(studentsGrades){
-
-    } -->
-In the student grading program, my function is to display the result of every grade typed in and return the correct grade. I have indicated the return value for instance :
-
-<!-- if(studentsGrades >= 79 && studentsGrades <= 100){
-         return "A"
-    } -->
- when we console.log the function `checkGrades` and pass an argument of `56` to it, the function should return `"A"`. This is because this is because the function indicates that A > 79
-    <!-- console.log(checkGrades(86)) -->
+This file shows how we will get the output as the student grade after indicating the studenrt marks. We then proceed to declaring a cont variable to the student marks as follows;
 
 
-******
-Toy challenge2
-The code challenge tests a program that takes as input the speed of a car e.g 80. If the speed is less than 70, it should print “Ok”. Otherwise, for every 5 km/s above the speed limit (70), it should give the driver one demerit point and print the total number of demerit points.
+js
+ `let studentMarks = 56`
+ function checkGrade(studentMarks){
+    console.log(checkGrade(studentMarks));
+ }
 
-For example, if the speed is 80, it should print: “Points: 2”. If the driver gets more than 12 points, the function should print: “License suspended”.
 
-The function `checkSpeedCar` is assigned a parameter `speedCar` and return different values depending on the return instructions.
-<!-- function checkSpeedCar(speedCar){ -->
- If the car speed input `70`, which is the speed limit then the return will print `"Ok"`
-<!-- if (speedCar <=70){
-    return "OK" -->
-The reurn value of every additional `5km/s` will be `total number of demerit points`. To assign this value to a strictly equality operator, we use the `Math.floor`so that it rounds down the demerit points.
-<!-- else if (speedCar <= 130){
-    return Math.floor((speedCar-70)/5) + "  points" -->
-Any speed above 130 will return  `"Lincense suspended"`
-<!-- else if(speedCar > 130){
-    return "Lincense suspended"
-} -->
-To convert the speed into a value we use `.value`
-    <!-- let speed = parseInt(document.getElementById ("Speed").value) -->
+  This shows that we have initialized the the let variable and then we proceed to providing the value of student marks to be "".
+The condition for the above statement shows that our output student grade should be of `C`.
+
+
+Let's take a look at what's happening in our conditional statement using debugger. Run
+`node studentMarks.js` in the terminal to start the debugger you should see the  grade `C`
+Lets say i change my student marks to be `86`, the student grade will eventually change because of the conditional statement and the grade will therefore be  of grade `A`
+
+
+For any studentMarks  above `100`.It should print `Enter a valid grade`. This shows that we should not enter marks greater than 100.
 
 
 
-********
-Toy challenge3
+## The `speedCar.js` file
 
-********
-## SetUp Instruction
-### Requirements
-* [Lang](lang Url)
-* [Framework](Framework URL)
-* Text editor eg [Visual Studio Code](https://code.visualstudio.com/download)
-* [Testing Platform](Platform URL)
+Here we are checking the speed of a car on different conditions. We declare the const variable to the speedcar as folows;
+
+js
+let speedCar = 95
+function checkSpeedCar(speedCar){
+console.log(checkSpeedCar(speedCar));
+}
+
+Here, we have provided the value of the speedcar to be `95` The condition in our file was to bring out the number of points one gets according to the speed.Our speed limit was `70`,and for every speed of `5 km/s` above the speed limit we add one point. For instance in our case  `95` is past our speed limit and this will print `Points:5` as our output.
 
 
-### Getting Files
-* Fork the repo
-- Create a new branch in your terminal (git checkout -b improve-feature)
-- Install the prerequisites
-- Make appropriate changes in file(s)
-- Run the server to see the changes
-- Add the changes and commit them (git commit -am "Improve App")
-- Push to the branch (git push origin improve-app)
-- Create a Pull request
-* Open the folder location on terminal and use the following command to run app:
+Let's take a look at what's happening in our conditional statement using debugger. Run
+`node speedCar.js` in the terminal to start the debugger you should see the points as `Points:3`
+Lets say i change my speedcar to be `80`, the speedCar points will  change because of the conditional statement and the points will be `Points:2`
 
-## How To Run It
->  $ node.js
-To print the console
->open with live server
+For any speedcar printing more than 12 points its output will be `License suspended`. The speedCar having more than 12 points according to the calculation is `135` which has 13 points.In this case if we use the speedCar of 135 we will have the `License suspended`
 
-Then run server with the above command
-*****
-## Live Link
-Or you can access the web application directly via this [LINK.](link.com/)
-*****
-## Dependencies
-- Package Name
-- Package Name
-- Package Name
-- Package Name
-*****
-## Technologies Used
-1. HTML
-2. MdBootstrap
-3. HTML
-4. CSS
-5. JavaScript
-*****
-## Contact Information
-* Email : example@gmail.com
-*****
-## [License](LICENSE)
-MIT License
-Copyright (c) YEAR Author
+
+## The `netSalary.js` file
+
+    This file consist of various calculations  and first we are going to calculate how get the gross income using the allowances and the basic salary: This is done as follows;
+js
+function grossIncome(basicSalary, ...allowances){
+    let total = basicSalary
+    for(let allowance of allowances){
+        total += allowance
+    }
+ return sum
+}
+
+    The return total now is our gross income.
+    Our next step is calculating the NHIF gross pay according to the conditional statement given.
+js
+function NHIF(grossPay){
+    if (grossPay <= 6000){
+        return 150
+    }
+    }
+
+Our conditional statement continues down the line as indicated on our `salary.js` file and the return depends on the gross pay.
+
+We are also going to calculate the NHIF ppensionable pay by;
+js
+function NSSF(pensionablePay){
+    return pensionablePay * 0.06
+ }
+
+The return pensionable pay is multiplied by 6% which is 0.06
+
+This is followed by the taxable pay calculated as follows;
+JS
+function taxablePay(grossIncome, ...deductions){
+    for(let deduction of deductions){
+        grossIncome -=deduction
+
+        return grossIncome
+    }
+}
+
+Our next step is calculating our taxable paye using the conditions provided and its rates.
+js
+function PAYE(taxablepay){
+    if(taxablepay <= 24000){
+        return taxablepay * 0.1
+    }
+    else if(taxablepay <= 32333){
+        return taxablepay * 0.25
+    }
+    else if(taxablepay > 32333){
+        return taxablepay * 0.3
+    }
+}
+
+Finally we will have to get the netPay
+
+function netPay(taxablepay, paye){
+    return taxablepay - paye
+
+}
